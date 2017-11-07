@@ -20,7 +20,10 @@
           <li><%= !@event.includes_food ? ("<s>food</s>").html_safe : "food"%></li>
           <li><%= !@event.includes_drinks ? ("<del>drinks</del>").html_safe : "drinks" %></li>
         </ul>
-
+    <h4>Categories</h4>
+    <% @categories.each do |category| %>
+      <span class="label label-success"><%= category.name %></span>
+    <% end %>
   </div>
 
 </div>

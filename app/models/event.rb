@@ -7,6 +7,7 @@ class Event < ApplicationRecord
   validates :starts_at, :ends_at, :presence => true
   after_initialize :default_values
 
+  has_and_belongs_to_many :categories
 
   def end_after_start
 
