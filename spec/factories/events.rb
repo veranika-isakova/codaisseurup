@@ -8,7 +8,7 @@ FactoryGirl.define do
     includes_food     true
     includes_drinks   true
     starts_at         { Faker::Time.between(DateTime.now - 2, DateTime.now) }
-    ends_at           { Faker::Time.between(DateTime.now - 2, DateTime.now) }
+    ends_at           { Faker::Time.between(DateTime.now + 2, DateTime.now) }
     user              { build(:user) }
 
     trait :active do
