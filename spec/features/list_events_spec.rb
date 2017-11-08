@@ -14,7 +14,7 @@ describe "Current user viewing the list of events" do
     visit events_url
 
     expect(page).to have_text("Name 1")
-    #expect(page).to have_text("Name 2")
+    expect(page).not_to have_text("Another users event")
   end
 
   it "does not show other users events" do

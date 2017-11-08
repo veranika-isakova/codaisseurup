@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Profile.destroy_all
 Category.destroy_all
 User.destroy_all
 
@@ -24,7 +25,7 @@ city = Category.create(name:"City")
 
 Event.create!(
   name: "Photo Tour",
-  description: "I want to make photos of the massive fields of tulips, windmills, canals, and unique small towns and villages",
+  description: Faker::Lorem.sentence(40),
   location: "Amsterdam",
   price: 10,
   capacity: 10,

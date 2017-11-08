@@ -19,6 +19,9 @@
     <h4>Dates</h4>
     <p>The beginning: <%= @event.starts_at.strftime("%d-%m-%y") %></p>
     <p>The end: <%= @event.ends_at.strftime("%d-%m-%y") %></p>
+    
+    <h4>Price</h4>
+    <p><%= @event.price %></p>
 
     <h4>Bonuses</h4>
         <ul class="bonuses">
