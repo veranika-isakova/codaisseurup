@@ -10,12 +10,10 @@ class Event < ApplicationRecord
   has_and_belongs_to_many :categories
 
   def end_after_start
-
-    if ends_at < starts_at
+    if ends_at <= starts_at
       errors.add(:ends_at, "must be after the start date")
     end
   end
-
 
   def default_values
     self.price ||= 0

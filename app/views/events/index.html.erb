@@ -1,14 +1,14 @@
 <div class="row">
   <div class="col-md-3">
     <ul class="sidebar-list">
-      <li class="sidebar-item"><%= link_to "Your Listings", events_path, class: "sidebar-link active" %></li>
+      <li class="sidebar-item"><%= link_to "Your Events", events_path, class: "sidebar-link active" %></li>
 
     </ul>
   </div>
   <div class="col-md-9">
     <div class="panel panel-primary">
       <div class="panel-heading">
-        Your Listings
+        Your Events
       </div>
       <div class="panel-body">
 
@@ -30,10 +30,3 @@
     <%= link_to "Add new event", new_event_path, class: "btn btn-primary" %>
   </div>
 </div>
-
-<ul class="dropdown-menu">
-  <li><%= link_to "Your Listings", rooms_path %></li>
-  <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-  <li role="separator" class="divider"></li>
-  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-</ul>

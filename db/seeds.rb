@@ -38,7 +38,7 @@ Event.create!(
 
   Event.create!(
     name: "Camping",
-    description: "Tired of the same scenery, the dirty, hot gyms? Then get outside and enjoy the beautiful Rotterdam weather and get in your best shape with Boot Camp Amsterdam! ",
+    description: "Tired of the same scenery, the dirty, hot gyms? Then get outside and enjoy the beautiful Rotterdam weather and get in your best shape with Camping Rotterdam! ",
     location: "Rotterdam",
     price: 30,
     capacity: 12,
