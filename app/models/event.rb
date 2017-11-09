@@ -27,4 +27,5 @@ class Event < ApplicationRecord
   def self.order_by_price
     order :price
   end
+   has_many :photos
 end

@@ -6,10 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Profile.destroy_all
+Photo.destroy_all
 Category.destroy_all
+Event.destroy_all
+Profile.destroy_all
 User.destroy_all
 
+#users
 arno = User.create!(
   email: 'arno@codaisseur.com',
   password: '123456'
@@ -18,12 +21,15 @@ valerii = User.create!(
   email: "valerii@odaisseur.com",
   password: "123456"
 )
+
+#categories
 travel = Category.create(name: "Travel")
 photo = Category.create(name:"Photo")
 nature = Category.create(name:"Nature")
 city = Category.create(name:"City")
 
-Event.create!(
+#events
+event_1 = Event.create!(
   name: "Photo Tour",
   description: "Let's go!",
   location: "Amsterdam",
@@ -37,7 +43,7 @@ Event.create!(
   user: arno,
   categories: [photo, city])
 
-  Event.create!(
+event_2 = Event.create!(
     name: "Camping",
     description: "Tired of the same scenery, the dirty, hot gyms? Then get outside and enjoy the beautiful Rotterdam weather and get in your best shape with Camping Rotterdam! ",
     location: "Rotterdam",
@@ -50,3 +56,12 @@ Event.create!(
     active: true,
     user: valerii,
     categories: [travel, nature])
+
+#photos
+photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/jordaan-amsterdam_h68htt.jpg", event: event_1)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/GettyImages-618066222-58a7a9565f9b58a3c9d780d3_ri9yay.jpg", event: event_1)
+photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/armsterdam-canal-2_stxaju.jpg", event: event_1)
+
+photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/camping1_hepmwj.jpg", event: event_2)
+photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/best-camping-spots-Brisbane_mlriaf.png", event: event_2)
+photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/17-0324_free-camping-bc_ivkyf2.jpg", event: event_2)

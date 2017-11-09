@@ -19,7 +19,7 @@
     <h4>Dates</h4>
     <p>The beginning: <%= @event.starts_at.strftime("%d-%m-%y") %></p>
     <p>The end: <%= @event.ends_at.strftime("%d-%m-%y") %></p>
-    
+
     <h4>Price</h4>
     <p><%= @event.price %></p>
 
@@ -31,6 +31,11 @@
     <h4>Categories</h4>
     <% @categories.each do |category| %>
       <span class="label label-success"><%= category.name %></span>
+    <% end %>
+
+    <h4>Photos</h4>
+    <% @event.photos.each do |photo| %>
+    <%= image_tag photo.image %>
     <% end %>
   </div>
 
