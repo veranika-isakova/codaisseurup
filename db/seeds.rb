@@ -25,7 +25,7 @@ city = Category.create(name:"City")
 
 Event.create!(
   name: "Photo Tour",
-  description: Faker::Lorem.sentence(40),
+  description: "Let's go!",
   location: "Amsterdam",
   price: 10,
   capacity: 10,
