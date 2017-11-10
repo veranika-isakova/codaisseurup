@@ -40,11 +40,22 @@
       <%= file_field_tag "images[]", type: :file, multiple: true %>
     </span>
   </div>
-  
+
   <div id="photos">
     <%= render 'photos/list' %>
   </div>
 
+  <label>Document</label>
+
+<div class="form-group">
+  <span class="btn btn-default">
+    Upload Document
+    <%= file_field_tag "document", type: :file, multiple: false %>
+  </span>
+</div>
+<div id="document">
+  <%= render 'documents/list' %>
+</div>
   <label>Publish this event?</label>
 
   <div class="form-group">

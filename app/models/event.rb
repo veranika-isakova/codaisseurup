@@ -28,4 +28,7 @@ class Event < ApplicationRecord
     order :price
   end
    has_many :photos
+   has_one :document, :dependent => :destroy
+   has_many :registrations, dependent: :destroy
+   has_many :guests, through: :registrations, source: :user
 end

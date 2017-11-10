@@ -11,6 +11,7 @@ Category.destroy_all
 Event.destroy_all
 Profile.destroy_all
 User.destroy_all
+#Registration.destroy_all
 
 #users
 arno = User.create!(
@@ -41,7 +42,9 @@ event_1 = Event.create!(
   ends_at: Date.parse('13-12-2017'),
   active: true,
   user: arno,
-  categories: [photo, city])
+  categories: [photo, city]
+  )
+  #photos: [photo1, photo2, photo3]
 
 event_2 = Event.create!(
     name: "Camping",
@@ -55,7 +58,9 @@ event_2 = Event.create!(
     ends_at: Date.parse('23-08-2018'),
     active: true,
     user: valerii,
-    categories: [travel, nature])
+    categories: [travel, nature]
+  )
+    #photos: [photo4, photo5, photo6]
 
 #photos
 photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/jordaan-amsterdam_h68htt.jpg", event: event_1)
@@ -65,3 +70,7 @@ photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisak
 photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/camping1_hepmwj.jpg", event: event_2)
 photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/best-camping-spots-Brisbane_mlriaf.png", event: event_2)
 photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/17-0324_free-camping-bc_ivkyf2.jpg", event: event_2)
+#registration
+
+#Registration.create!(event: event_1, user: arno, status: "free" , price: 10, guests_count: 3)
+#Registration.create!(event: event_2, user: valerii, status: "free" , price: 30, guests_count: 3)

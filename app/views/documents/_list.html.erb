@@ -1,0 +1,13 @@
+<% if @document %>
+
+    <div class="panel panel-default">
+      <div class="panel-heading preview">
+        <%= link_to "Brochure with past events",
+                          @document.document.url %>
+      </div>
+      <div class="panel-body">
+        <%= link_to "Delete", document_path( @document.id ), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+
+<% end %>
