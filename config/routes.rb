@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, only: [:show]
-  resources :events, except: [:destroy]
+  resources :events, except: [:destroy] do
+    resources :registrations, only: [:create]
+  end
   resources :profiles, only: [:new, :edit, :create, :update]
   resources :photos, only: [:destroy]
   resources :documents, only: [:destroy]

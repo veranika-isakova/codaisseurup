@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Registration.destroy_all
 Document.destroy_all
 Photo.destroy_all
 Category.destroy_all
@@ -72,5 +73,5 @@ photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisak
 photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/veranikaisakova/image/upload/v1510227235/17-0324_free-camping-bc_ivkyf2.jpg", event: event_2)
 #registration
 
-#Registration.create!(event: event_1, user: arno, status: "free" , price: 10, guests_count: 3)
-#Registration.create!(event: event_2, user: valerii, status: "free" , price: 30, guests_count: 3)
+Registration.create!(event: event_1, user: arno, status: true , price: 10, guests_count: 3)
+Registration.create!(event: event_2, user: valerii, status: false , price: 30, guests_count: 3)
