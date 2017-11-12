@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
-  describe "validations" do
 
+  describe "validations" do
       it "is invalid without name" do
         event = Event.new(name: nil)
         event.valid?
@@ -33,6 +33,7 @@ RSpec.describe Event, type: :model do
         expect(event.errors).to have_key(:ends_at)
       end
   end
+  
   describe "#bargain?" do
   let(:bargain_event) { create :event, price: 20 }
   let(:non_bargain_event) { create :event, price: 200 }
