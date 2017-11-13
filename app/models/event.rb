@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   validates :name, presence: true
   validates :description, presence: true, length: { maximum: 500 }
@@ -33,8 +33,8 @@ class Event < ApplicationRecord
   end
 
   scope :published, -> { where(active: true) }
-  
-   has_many :photos
+
+   has_many :photos, dependent: :destroy
    has_one :document, :dependent => :destroy
    has_many :registrations, dependent: :destroy
    has_many :guests, through: :registrations, source: :user

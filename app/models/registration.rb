@@ -1,5 +1,5 @@
 class Registration < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   belongs_to :event
 
   def set_total_price
