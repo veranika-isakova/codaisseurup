@@ -27,6 +27,13 @@ class Event < ApplicationRecord
   def self.order_by_price
     order :price
   end
+
+  def self.alphabetical
+    order(name: :asc)
+  end
+
+  scope :published, -> { where(active: true) }
+  
    has_many :photos
    has_one :document, :dependent => :destroy
    has_many :registrations, dependent: :destroy
