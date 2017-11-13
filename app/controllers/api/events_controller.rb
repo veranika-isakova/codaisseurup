@@ -29,7 +29,7 @@ class Api::EventsController < ApplicationController
 end
 
 def destroy
-  event = event.find(params[:id])
+  event = Event.find(params[:id])
   event.destroy
 
   render status: 200, json: {
