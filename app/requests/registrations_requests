@@ -1,0 +1,16 @@
+curl \
+-i \
+-H "Accept: application/json" \
+-H "Content-type: application/json" \
+-X POST \
+-d '{"guests_count":"5"}' \
+http://localhost:3000/api/events/7/registrations
+
+
+curl \
+-i \
+-H "Accept: application/json" \
+-H "Content-type: application/json" \
+-X PUT \
+-d '{"guests_count":"7"}' \
+http://localhost:3000/api/events/7/registrations/14

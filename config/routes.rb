@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   namespace :api do
   resources :events do
   resources :registrations, only: [:create, :update, :destroy]
-end
-end
+  end
+  end
 end
